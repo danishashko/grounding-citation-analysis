@@ -6,7 +6,7 @@
 
 ## TL;DR
 
-> **Every Google AI Mode and Gemini citation URL contains a hidden `#:~:text=` fragment that encodes the exact sentence Google pulled from the source page.** We decoded those fragments at scale — making this the first study to look at citation behaviour at the *sentence* level instead of just pages or domains.
+> **Every Google AI Mode and Gemini citation URL contains a hidden `#:~:text=` fragment that encodes the exact sentence Google highlights from the source page.** We decoded those fragments at scale — making this the first study to look at citation behaviour at the *sentence* level instead of just pages or domains.
 >
 > **Dataset: 42,971 citations across 520 queries on 6 platforms:**
 >
@@ -58,7 +58,7 @@ This study does.
 
 ## The Discovery: `#:~:text=` Fragments Are Breadcrumbs
 
-All six platforms return citation URLs — but they don't all reveal the same amount of information. Google's AI Mode and Gemini tack on a [Web Text Fragments](https://web.dev/text-fragments/) anchor that encodes the *exact passage they pulled*. ChatGPT, Perplexity, Copilot, and Grok just link to the page with no sentence-level detail, so for those four we can only look at domain frequency, URL overlap with organic rankings, and cross-platform differences.
+All six platforms return citation URLs — but they don't all reveal the same amount of information. Google's AI Mode and Gemini tack on a [Web Text Fragments](https://web.dev/text-fragments/) anchor that encodes the *exact passage they cite*. ChatGPT, Perplexity, Copilot, and Grok just link to the page with no sentence-level detail, so for those four we can only look at domain frequency, URL overlap with organic rankings, and cross-platform differences.
 
 This gives us a two-tier dataset: sentence-level findings (position, length, readability, structure) come from AI Mode and Gemini's fragment URLs. Domain-level and cross-platform findings draw on all six.
 
@@ -75,7 +75,7 @@ Decode the fragment:
 Intermittent fasting is an eating pattern that cycles between periods of fasting and eating
 ```
 
-That is the **exact sentence Google pulled and used to ground its answer** — no guesswork needed.
+That is the **exact sentence Google chose to cite from that page** — no guesswork needed.
 
 The fragment spec supports:
 
@@ -671,7 +671,7 @@ Three obvious next steps based on the parallel research:
 
 ## Conclusion
 
-The `#:~:text=` fragment in Google AI Mode citation URLs isn't just a browser convenience — it's a window into Google's grounding pipeline. Decoding these fragments at scale lets us study citation behaviour at a sentence level that no prior research has done systematically.
+The `#:~:text=` fragment in Google AI Mode citation URLs isn't just a browser convenience — it's a window into Google's citation pipeline. Decoding these fragments at scale lets us study citation behaviour at a sentence level that no prior research has done systematically.
 
 The full codebase is published. Run it yourself, extend the query set, add categories, test in other countries. Everything is reproducible and auditable.
 
