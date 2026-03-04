@@ -23,13 +23,13 @@ Decode it and you know **exactly which sentence Google extracted** from the sour
 
 ```mermaid
 flowchart LR
-    A[queries.csv\n100 queries] --> B[Bright Data\nAI Mode Scraper]
-    B --> C[Raw citation JSON\nwith #:~:text= URLs]
-    C --> D[Text fragment\nparser]
-    D --> E[Cited sentence\nper citation row]
-    E --> F[Source page\nscraper]
-    F --> G[Positional\nanalysis]
-    G --> H[Statistical\nanalysis + Charts]
+    A[queries.csv 100 queries] --> B[Bright Data AI Mode Scraper]
+    B --> C[Raw citation JSON with #:~:text= URLs]
+    C --> D[Text fragment parser]
+    D --> E[Cited sentence per citation row]
+    E --> F[Source page scraper]
+    F --> G[Positional analysis]
+    G --> H[Statistical analysis + Charts]
 ```
 
 1. **Collect** — Use Bright Data's Google AI Mode Scraper (real SERP, not API) to gather citation URLs for 100 queries
