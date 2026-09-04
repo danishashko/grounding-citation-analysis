@@ -1,5 +1,8 @@
 # Grounding Citation Analysis
 
+> The dataset from this study is now maintained in the consolidated [ai-search-datasets](https://github.com/danishashko/ai-search-datasets/tree/main/grounding-citation-analysis) repo alongside newer studies. This repo keeps the full pipeline, notebooks, and charts.
+
+
 **Reverse engineering Google AI Mode's sentence-level citation behaviour using `#:~:text=` URL fragments.**
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
